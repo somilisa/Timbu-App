@@ -12,7 +12,7 @@ const Cart = () => {
         <div className="wrapper">
           <div className="product">
             <div className="product-image">
-              <img src="../../src/assets/jersey-01.png" alt="" />
+              <img src="./assets/jersey-01.png" alt="" />
             </div>
             <div className="product-description">
               <p>AC Milan Jersey</p>
