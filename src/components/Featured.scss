@@ -27,6 +27,7 @@
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
       & .product {
+        text-decoration: none;
         & .product-image {
           position: relative;
           background-color: #f3f5f7;
