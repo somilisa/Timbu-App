@@ -1,0 +1,66 @@
+.footer {
+  background: #000000b2;
+  padding: 91px 0 32px;
+  @media screen and (max-width: 768px) {
+    padding: 18px 0 3.16px;
+  }
+  & h1 {
+    font-family: Montserrat;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 73.14px;
+    margin-bottom: 92px;
+    color: #ffffff;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 29.26px;
+      margin-bottom: 17px;
+    }
+    & span {
+      color: var(--primary);
+    }
+  }
+  & .search-bar {
+    background: transparent;
+    border: 1px solid #ffffffcc;
+    border-radius: 35px;
+    padding: 20px 40px;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36.57px;
+    text-align: left;
+    margin-bottom: 95px;
+    &::placeholder {
+      color: #ffffff;
+      font-family: Roboto;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 35.16px;
+      text-align: left;
+      @media screen and (max-width: 768px) {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 12.19px;
+        text-align: left;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      padding: 8.46px 13.73px 5.54px 8.21px;
+      border-radius: 10px;
+      margin-bottom: 21px;
+      font-size: 10px;
+      line-height: 12.19px;
+      text-align: left;
+    }
+  }
+  .copyright {
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 12.19px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,45 @@
+.checkout {
+  min-height: calc(100vh - 470px);
+  & h3 {
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60.95px;
+    margin-bottom: 53px;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 29.26px;
+      margin-bottom: 33px;
+    }
+  }
+  & .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 23px 96px 286px 96px;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 0 10px 100px 10px;
+      gap: 90px;
+    }
+    & form {
+      background-color: #323232;
+      padding: 58px 43px;
+      & p {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48.76px;
+        text-align: left;
+        color: #fff;
+      }
+      & input,
+      select {
+        padding: 23px 459px 28px 43px;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        background: transparent;
+        display: block;
+      }
+    }
+  }
+}
