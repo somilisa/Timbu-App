@@ -23,13 +23,15 @@
     & .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
+      justify-items: center;
       gap: 20px;
       @media screen and (max-width: 768px) {
-        column-gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
       }
       & .product {
         & .product-image {
+          width: fit-content;
           position: relative;
           background-color: #f3f5f7;
           padding: 36px 42px 82px 42px;
@@ -41,13 +43,10 @@
             height: 216px;
             width: 288px;
             object-fit: contain;
-            height: 86px;
-            width: 154px;
+
             @media screen and (max-width: 768px) {
-              @media screen and (max-width: 768px) {
-                column-gap: 15px;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-              }
+              height: 86px;
+              width: 154px;
             }
           }
         }

@@ -1,33 +1,56 @@
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  removeFromCart,
+  incrementQuantity,
+  decrementQuantity,
+} from "../slices/cartSlice";
+import CartItem from "../components/CartItem";
 import "./Cart.scss";
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import ProductsList from "../src/components/ProductsList.jsx";
-// import { ShoppingCart } from "../src/components/ShoppingCart.js";
 
 const Cart = () => {
+  const dispatch = useDispatch();
+  const { items, totalPrice } = useSelector((state) => state.cart);
+
+  const handleRemoveFromCart = (item) => {
+    dispatch(removeFromCart(item));
+  };
+
+  const handleIncrement = (item) => {
+    dispatch(incrementQuantity({ id: item.id }));
+  };
+
+  const handleDecrement = (item) => {
+    dispatch(decrementQuantity({ id: item.id }));
+  };
+  console.log(totalPrice);
   return (
     <main>
       <section className="cart">
         <h3>CART</h3>
         <div className="wrapper">
-          <div className="product">
-            <div className="product-image">
-              <img src="./assets/jersey-01.png" alt="" />
+          {items.length < 1 ? (
+            <div className="empty-cart">
+              <p>No Item in Cart</p>
             </div>
-            <div className="product-description">
-              <p>AC Milan Jersey</p>
-              <p>XL</p>
-              <p className="amount">&#8358; 40,000</p>
-              <div></div>
-              <button className="delete-btn">Remove Product</button>
+          ) : (
+            <div className="cart-items">
+              {items.map((item) =>
+                CartItem(
+                  item,
+                  handleDecrement,
+                  handleIncrement,
+                  handleRemoveFromCart
+                )
+              )}
             </div>
-          </div>
+          )}
           <div className="order-summary">
             <h3>Order Summary</h3>
             <div className="content">
               <p>
                 <span className="total">Total: </span>
-                <span className="amount">&#8358; 40,000</span>
+                <span className="amount">&#8358;{totalPrice}</span>
               </p>
               <Link to="/checkout" className="checkout-btn">
                 Checkout
