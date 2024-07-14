@@ -30,7 +30,7 @@ const SingleProduct = () => {
   };
 
   return (
-    <main>
+    <main className="single-product">
       <section className="product-hero">
         <header>
           <p>
@@ -68,12 +68,22 @@ const SingleProduct = () => {
                     )
                   }
                 >
-                  <img src={product.images[0]} alt={product.title} />
-                  <img src={product.thumbnail} alt={product.title} />
+                  <img
+                    src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
+                    alt={product.name}
+                  />
+                  <img
+                    src={`https://api.timbu.cloud/images/${product?.photos[1]?.url}`}
+                    alt={product.name}
+                  />
+                  <img
+                    src={`https://api.timbu.cloud/images/${product?.photos[2]?.url}`}
+                    alt={product.name}
+                  />
                 </Carousel>
               </div>
               <div className="right">
-                <h4>{product.title}</h4>
+                <h4>{product.name}</h4>
                 <div className="productReview">
                   <div>
                     {range(5).map((num) => {
@@ -85,11 +95,10 @@ const SingleProduct = () => {
                       );
                     })}
                   </div>
-                  ({product.reviews.length}) Reviews
                 </div>
-                <p className="productPrice">${product.price}</p>
+                <p className="productPrice">${product.current_price}</p>
                 <p className="availability">
-                  Availability: <span>{product.availabilityStatus}</span>
+                  Availability: <span>{product.is_available}</span>
                 </p>
                 <p className="description">
                   Met minim Mollie non desert Alamo est sit cliquey dolor do met
@@ -97,12 +106,6 @@ const SingleProduct = () => {
                   Excitation venial consequent sent nostrum met.
                 </p>
                 <hr />
-                <div className="colors">
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                  <button></button>
-                </div>
                 <div className="call-to-action">
                   <Button
                     color={"#fff"}

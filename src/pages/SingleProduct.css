@@ -1,5 +1,9 @@
-.product-hero {
-  background-color: #fafafa;
+.single-product {
+  min-height: calc(100vh - 470px);
+  padding: 23px 96px 286px 96px;
+  @media screen and (max-width: 768px) {
+    padding: 0 10px 100px 10px;
+  }
 }
 .product-hero header {
   padding: 24px 0;

@@ -27,8 +27,12 @@ export const api = createApi({
       }),
     }),
     getProductById: builder.query({
-      query: (id) => `products/${id}`,
-      params: { ...defaultParams },
+      query: (id) => {
+        return {
+          url: `products/${id}`,
+          params: { ...defaultParams },
+        };
+      },
     }),
   }),
 });
