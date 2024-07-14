@@ -1,0 +1,238 @@
+.product-hero {
+  background-color: #fafafa;
+}
+.product-hero header {
+  padding: 24px 0;
+}
+.product-hero header p {
+  max-width: 1033px;
+  margin: 0 auto;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  color: #bdbdbd;
+}
+.home {
+  color: var(--text-color);
+}
+.product-hero .wrapper {
+  display: flex;
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 30px;
+}
+.product-info .wrapper {
+  max-width: 1056px;
+  margin: 0 auto;
+}
+
+hr {
+  border-bottom: 1px solid #ececec;
+}
+.product-info nav button {
+  padding: 24px;
+  background: transparent;
+  border: none;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.product-info .info-wrapper {
+  display: flex;
+  gap: 125px;
+  padding: 24px 0 48px;
+}
+.info,
+.image {
+  flex: 1;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.info h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.info p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: var(--secondary-text-color);
+}
+.image img {
+  width: 100%;
+}
+.product-hero .left {
+  flex: 1;
+}
+.arrow-styles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  border: none;
+  z-index: 2;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.arrow-styles svg path {
+  fill: #858585;
+}
+.right {
+  flex: 1;
+}
+.right h4 {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.productReview {
+  display: flex;
+  gap: 8px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+.filled path {
+  fill: #f3cd03;
+}
+.productRating {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+}
+.productPrice {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+}
+.availability {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.20000000298023224px;
+  text-align: left;
+  margin-bottom: 32px;
+  color: var(--secondary-text-color);
+}
+.availability span {
+  color: var(--primary-color);
+}
+.description {
+  text-align: left;
+  visibility: hidden;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.20000000298023224px;
+  color: #858585;
+}
+.right hr {
+  margin: 16px 0 30px;
+}
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 67px;
+}
+.colors button {
+  height: 30px;
+  width: 30px;
+  border: transparent;
+  border-radius: 50%;
+}
+.colors button:first-child {
+  background-color: var(--primary-color);
+}
+.colors button:nth-child(2) {
+  background-color: var(--success-color);
+}
+.colors button:nth-child(3) {
+  background-color: #e77c40;
+}
+.colors button:nth-child(4) {
+  background-color: var(--text-color);
+}
+.call-to-action {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.products-section {
+  background-color: #fafafa;
+  padding: 48px 0;
+}
+.products-section h3 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: left;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.products-section hr {
+  margin: 24px auto;
+  max-width: 1040px;
+}
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 0;
+}
+@media screen and (max-width: 767px) {
+  .product-hero header p {
+    text-align: center;
+  }
+  .product-hero {
+    padding: 48px 33px;
+  }
+  .product-hero .wrapper,
+  .product-info .wrapper,
+  .info-wrapper,
+  .brands {
+    flex-direction: column;
+  }
+  .product-info,
+  .products-section {
+    display: none;
+  }
+  .description {
+    visibility: visible;
+  }
+}

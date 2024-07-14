@@ -51,21 +51,17 @@
             }
           }
           & button {
-            width: calc(100% - 60px);
-            position: absolute;
-            right: 50%;
-            top: 341px;
-            transform: translate(50%, -100%);
+            width: 100%;
+            max-width: 230px;
             background-color: var(--primary);
+            font-family: Montserrat;
             color: #fff;
             border: transparent;
             border-radius: 4px;
             padding: 15px;
+            margin: 0 auto;
             @media screen and (max-width: 768px) {
-              width: calc(100% - 30px);
-              top: 184px;
-              border-radius: 1px;
-              padding: 7px 38px;
+              max-width: 120px;
             }
           }
         }

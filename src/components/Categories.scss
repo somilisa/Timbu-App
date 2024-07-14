@@ -23,7 +23,7 @@
     & .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
-      justify-items: center;
+      justify-content: center;
       gap: 20px;
       @media screen and (max-width: 768px) {
         gap: 15px;
@@ -39,6 +39,9 @@
           border: transparent;
           border-radius: 10px;
           margin-bottom: 20px;
+          @media screen and (max-width: 768px) {
+            padding: 68px 22px;
+          }
           & img {
             height: 216px;
             width: 288px;

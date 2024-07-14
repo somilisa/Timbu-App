@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Star } from "./Icons";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../slices/cartSlice";
+import { Link } from "react-router-dom";
 import { range } from "../utils";
 
 const ProductCard = ({ product }) => {
@@ -14,10 +15,10 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <a className="product" href="#">
+      <Link to={`/shop/${product.id}`} className="product" href="#">
         <div className="product-image">
           <img
-            src={`https://api.timbu.cloud/images/${product.photos[0].url}`}
+            src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
             alt=""
           />
           <button onClick={handleAddToCart}>Add to cart</button>
@@ -37,7 +38,7 @@ const ProductCard = ({ product }) => {
           </div>
           <p>&#8358; {product.current_price[0].NGN}</p>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
