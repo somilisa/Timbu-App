@@ -15,7 +15,7 @@ const CartItem = (
       <div className="product-description">
         <p>{item.name}</p>
         <p>XL</p>
-        <p className="amount">&#8358; {item.current_price[0].NGN}</p>
+        <p className="amount">&#8358; {item.current_price}</p>
         <div className="counter">
           <button onClick={() => handleDecrement(item)}>-</button>
           <span>{item.quantity}</span>

@@ -23,7 +23,6 @@ const Cart = () => {
   const handleDecrement = (item) => {
     dispatch(decrementQuantity({ id: item.id }));
   };
-  console.log(totalPrice);
   return (
     <main>
       <section className="cart">

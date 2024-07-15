@@ -194,6 +194,13 @@ hr {
   align-items: center;
   gap: 10px;
 }
+.icon-button {
+  background-color: transparent;
+  border: none;
+}
+.icon-button svg path {
+  fill: black;
+}
 .products-section {
   background-color: #fafafa;
   padding: 48px 0;

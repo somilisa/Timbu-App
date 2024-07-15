@@ -5,19 +5,10 @@ import { addToCart } from "../slices/cartSlice";
 import { useGetProductByIdQuery } from "../services/api";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {
-  Cart,
-  ChevronLeft,
-  ChevronRight,
-  Eye,
-  Love,
-  Star,
-} from "../components/Icons";
+import { Cart, ChevronLeft, ChevronRight, Star } from "../components/Icons";
 // import { images } from "../constants";
 // import ProductsList from "../components/ProductsList";
 import { range } from "../utils";
-import Button from "../components/Button";
-import IconButton from "../components/IconButton";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -107,21 +98,12 @@ const SingleProduct = () => {
                 </p>
                 <hr />
                 <div className="call-to-action">
-                  <Button
-                    color={"#fff"}
-                    backgroundColor={"var(--primary-color)"}
+                  <button
+                    className="icon-button"
+                    onClick={() => handleAddToCart(product)}
                   >
-                    Select Options
-                  </Button>
-                  <IconButton>
-                    <Love />
-                  </IconButton>
-                  <IconButton onClick={() => handleAddToCart(product)}>
                     <Cart />
-                  </IconButton>
-                  <IconButton>
-                    <Eye />
-                  </IconButton>
+                  </button>
                 </div>
               </div>
             </div>
